@@ -80,5 +80,7 @@ endif(WITH_DAVIS)
 
 link_directories(/usr/local/lib/x86_64-linux-gnu/) # libcaer
 #target_link_libraries(common ${OpenCV_LIBRARIES} ${OpenCV_LIBS})
-CUDA_ADD_EXECUTABLE(live_reconstruction_gui ${GUI_FILES} ${HEADER_FILES} ${UI_RESOURCES})
-TARGET_LINK_LIBRARIES(live_reconstruction_gui common X11 Qt5::Widgets Qt5::OpenGL caer cnpy)
+cuda_add_executable(reconstruct reconstruct.cpp ${HEADER_FILES})
+target_link_libraries(reconstruct common caer)
+#CUDA_ADD_EXECUTABLE(live_reconstruction_gui ${GUI_FILES} ${HEADER_FILES} ${UI_RESOURCES})
+#TARGET_LINK_LIBRARIES(live_reconstruction_gui common X11 Qt5::Widgets Qt5::OpenGL caer cnpy)
