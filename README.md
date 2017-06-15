@@ -1,4 +1,18 @@
 # DVS Reconstruction
+
+## Installation Prerequisites
+
+Before you compile everything as explained below, you should make the following
+exports with the values adapted as appropriate.
+
+```sh
+export COMPUTE_CAPABILITY=5.2
+export CUDA_SDK_ROOT_DIR=/opt/cuda/samples/
+export IMAGEUTILITIES_ROOT=$(realpath ./imageutilities)
+```
+
+## Actual Readme
+
 This repository provides software for our publication "Real-Time Intensity-Image Reconstruction for Event Cameras Using Manifold Regularisation", BMVC 2016.
 
 If you use this code please cite the following publication:
